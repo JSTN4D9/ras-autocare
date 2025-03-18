@@ -1,13 +1,13 @@
 const Joi = require('joi');
 
-const assignBarber = {
+const assignStaff = {
   body: Joi.object().keys({
     title: Joi.string().required(),
     image: Joi.string().uri().required(),
   }),
 };
 
-const updateBarber = {
+const updateStaff = {
   body: Joi.object().keys({
     title: Joi.string(),
     image: Joi.string().uri(),
@@ -15,6 +15,6 @@ const updateBarber = {
 };
 
 module.exports = {
-  assignBarber,
-  updateBarber,
+  assignStaff,
+  updateStaff,
 };
